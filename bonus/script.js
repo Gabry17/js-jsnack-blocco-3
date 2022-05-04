@@ -18,13 +18,15 @@ for(let i = 0; i < num.length; i++){
 const red = document.getElementById('red');
 const green = document.getElementById('green');
 
-for(let i = 0; i < pari.length; i++){
-    const thisPari = pari[i];
-    red.innerHTML += ` ${thisPari}`;
-}
+cicleArrayAndPushHTML(pari,red);
+cicleArrayAndPushHTML(dispari,green);
 
-for(let i = 0; i < dispari.length; i++){
-    const thisDispari = dispari[i];
-    green.innerHTML += ` ${thisDispari}`;
+//FUNCTION
+//questa funzione cicla un array e inserisce il valore dell array in un tag html
+function cicleArrayAndPushHTML(nameArray,elemHTML) {
+    for(let i = 0; i < nameArray.length; i++){
+        const thisArray = nameArray[i];
+        elemHTML.innerHTML += ` ${thisArray}`;
+    }
 }
 
