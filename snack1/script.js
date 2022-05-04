@@ -24,10 +24,11 @@ console.log(secondArray);
 
 //FUNCTION
 //funzione che cicla un elemento e pusha nell array numeri casuali
-function cicleFor(element,array) {
+function cicleFor(element,array,variable) {
     for(let i = 0; i < element; i++){
-        array.push(getRndInteger(1,100));
+        let variable = array.push(getRndInteger(1,100));
     }
+    return variable;
 }
 
 
@@ -37,6 +38,4 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
-//test
-//console.log(getRndInteger(1,5));
 
